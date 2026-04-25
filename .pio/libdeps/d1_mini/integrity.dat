@@ -1,0 +1,7 @@
+gyverlibs/Settings@^1.3.12
+gyverlibs/GyverNTP@^2.2.2
+gyverlibs/GyverDS3231@^1.1.0
+adafruit/Adafruit NeoPixel@^1.15.1
+adafruit/DHT sensor library@^1.4.6
+gyverlibs/WiFiConnector@^1.0.4
+gyverlibs/FileData@^1.0.3
