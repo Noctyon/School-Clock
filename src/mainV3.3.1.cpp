@@ -369,7 +369,7 @@ void setup() {
 
   sett.setPass(db[sta::webPass]);
   sett.begin();
-  sett.setVersion("3.3.0");
+  sett.setVersion("3.3.1");
   sett.onBuild(build);
 
   pinMode(BUZ_PIN, OUTPUT);
