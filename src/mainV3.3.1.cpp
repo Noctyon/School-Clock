@@ -302,13 +302,13 @@ void build(sets::Builder& web) {
         web.Switch("Don't buzz at 9:00", &set.nineNotBuz);
         if(web.Switch("Buzzer test", &buzTest)) web.reload();
         if (buzTest){
-          if (web.Button("")){digitalWrite(D6, 1); BuzOnTime = millis();}
+          if (web.Button("Buzzer")){digitalWrite(D6, 1); BuzOnTime = millis();}
         }
       }
     }
     {
       sets::Group g3(web, "Mode settings");delay(0);
-      web.Select("Тривалість годинника", "10 Sec.;20 Sec.;30 Sec.;40 Sec.;50 Sec.;60 Sec.", &set.DS3231Length);
+      web.Select("Clock duration", "10 Sec.;20 Sec.;30 Sec.;40 Sec.;50 Sec.;60 Sec.", &set.DS3231Length);
       web.Select("Lesson clock duration", "0 Sec.;10 Sec.;20 Sec.;30 Sec.;40 Sec.;50 Sec.", &set.lesLength);
       web.Color("Clock color", &set.colorTime);
       web.Color("Lesson color", &set.colorLesson);
@@ -369,7 +369,7 @@ void setup() {
 
   sett.setPass(db[sta::webPass]);
   sett.begin();
-  sett.setVersion("3.3.0");
+  sett.setVersion("3.3.1");
   sett.onBuild(build);
 
   pinMode(BUZ_PIN, OUTPUT);
